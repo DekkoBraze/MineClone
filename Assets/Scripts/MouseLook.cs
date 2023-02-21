@@ -33,12 +33,4 @@ public class MouseLook : MonoBehaviour
             transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
         }
     }
-
-    private void VerticalCameraLook()
-    {
-        _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
-        _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
-        float rotationY = transform.localEulerAngles.y;
-        transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0);
-    }
 }
